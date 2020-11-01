@@ -1,19 +1,19 @@
 title:              my Blog
-email:              your-email@example.com
-description:        A Blog Theme by Start Bootstrap
-author:             Start Bootstrap
+email:              unijay12@gmail.com
+description:        A Blog Theme by Jay Prakash
+author:             Jay Prakash
 baseurl:            "/"
 url:                "https://jayprakash02.github.io"
 
 # Social Profiles
-twitter_username:   SBootstrap
+twitter_username:   
 github_username:    jayprakash02
-facebook_username:  jayprakash02
-instagram_username:  
-linkedin_username:
+facebook_username:  jp.star.02
+instagram_username: jay_prakash02
+linkedin_username:  jay-prakash-002
 
 # Add your google-analytics ID here to activate google analytics
-google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
+google_analytics:   G-87YBE6JQHX # out your google-analytics code
 
 # Build settings
 markdown:           kramdown
