@@ -1,0 +1,4 @@
+---
+layout: allblogs
+permalink: /blogs/
+---
