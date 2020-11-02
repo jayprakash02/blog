@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}   
+<article class="post" role="article" itemscope="" itemtype="">
+    <header class="post-header">
+        <ul>
+            <li><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date }}</time></li>            
+        </ul>
+        <h2 itemprop="name headline">{{ post.title }}</h2>
+    </header>
+
+    <div class="post-content">
+        {{ post.content }}
+    </div>
+    <footer class="post-footer">
+        <div class="share">Share
+            <ul class="social-networks">
+                <li class="share-facebook"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i>&nbsp;<a href="#" class="s_facebook" target="_blank" onclick="window.open(this.href, &#39;&#39;,&#39;width=700,height=300&#39;);return false;"></a></li>
+                <li class="share-twitter"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i>&nbsp;<a href="#" rel="noreferrer" target="_blank" onclick="window.open(this.href, &#39;&#39;,&#39;width=700,height=300&#39;);return false;"></a></li>
+            </ul>
+        </div>
+        
+        <div class="tags">
+            <ul>                
+                <li>{{ post.author }}</li>                               
+            </ul>
+        </div>        
+    </footer>
+</article>
+
+{% endfor %}

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}   
+<article class="post" role="article" itemscope="" itemtype="">
+    <header class="post-header">
+        <ul>
+            <li><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date }}</time></li>            
+        </ul>
+        <h2 itemprop="name headline">{{ post.title }}</h2>
+    </header>
+</article>
+
+{% endfor %}
