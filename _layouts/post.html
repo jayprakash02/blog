@@ -32,17 +32,16 @@ layout: default
             </ul>
         </div>        
     </footer>
-    <div class="clearfix">
-
-        {% if page.previous.url %}
-        <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">← Previous<span class="d-none d-md-inline">
-            Post</span></a>
-        {% endif %}
-        {% if page.next.url %}
-        <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-            Post</span> →</a>
-        {% endif %}
-
-      </div>
 </article>
-
+<article>
+    <footer >
+        <div class="clear-fix">    
+            {% if page.previous.url %}
+            <a class=" float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}"><i class="fa fa-angle-left fa-3x"></i></a>
+            {% endif %}
+            {% if page.next.url %}
+            <a class="float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}"><i class="fa fa-angle-right fa-3x"></i></a>
+            {% endif %}    
+          </div>
+    </footer>
+</article>

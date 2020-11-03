@@ -3,14 +3,9 @@ layout: default
 ---
 
 <title>{{ site.title }}</title>
-{% if site.description %}
-<meta name="description" content="{{ site.description }}">
-<meta name="description" property="og:description" content="{{ site.description }}">
-<meta name="twitter:description" content="{{ site.description }}">
-{% endif %}
+
 
 {{ content }}
-
 
 {% for post in site.posts limit : 5 %}
 <article class="post" role="article" itemscope="" itemtype="">
@@ -55,6 +50,3 @@ layout: default
     </footer>
 </article>
 {% endfor %}
-<div class="clearfix">
-    <a class="btn btn-primary float-right" href="{{" posts"="" |="" relative_url="" }}"="">View All Posts →</a>
-  </div>
