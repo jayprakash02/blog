@@ -1,6 +1,6 @@
 <html>
 {% include head.html %}
-<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
 <body>
     <div class="wrapper">
         <aside class="user-profile fixed" role="complementary">
@@ -21,20 +21,20 @@
                 <a href="/"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp;Home</a>
                 <a href="/portfolio/"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp;Portfolio</a>
             </div>
-            <p class="about-me"><i class="fa fa-quote-left" aria-hidden="true"> </i> {{ site.data.portfolio.description }}</p>
+            <p class="about-me"><i class="fa fa-quote-left" aria-hidden="true"> </i>
+                {{ site.data.portfolio.description }}</p>
             <ul class="socials">
-                
                 {% if site.data.portfolio.facebook %}
-                <li><a href="{{ site.data.portfolio.facebook }}" class="fa fa-facebook"></a></li>                    
+                <li><a href="{{ site.data.portfolio.facebook }}" class="fa fa-facebook"></a></li>
                 {% endif %}
                 {% if site.data.portfolio.twitter %}
-                <li><a href="{{ site.data.portfolio.twitter }}" class="fa fa-twitter"></a></li>                    
+                <li><a href="{{ site.data.portfolio.twitter }}" class="fa fa-twitter"></a></li>
                 {% endif %}
                 {% if site.data.portfolio.github %}
-                <li><a href="{{ site.data.portfolio.github }}" class="fa fa-github"></a></li>                    
+                <li><a href="{{ site.data.portfolio.github }}" class="fa fa-github"></a></li>
                 {% endif %}
                 {% if site.data.portfolio.instagram %}
-                <li><a href="{{ site.data.portfolio.instagram }}" class="fa fa-instagram"></a></li>                    
+                <li><a href="{{ site.data.portfolio.instagram }}" class="fa fa-instagram"></a></li>
                 {% endif %}
             </ul>
         </aside>
@@ -43,17 +43,15 @@
             <div class="search" role="search">
                 <div>
                     <div class="search-holder">
-                        <input class="" type="text" id="search-input"  placeholder="search for...">
+                        <input class="" type="text" id="search-input" placeholder="search for...">
                     </div>
                 </div>
                 <ul id="results-container" class="results-container"></ul>
             </div>
-            
-                {{ content }}
-           
+            {{ content }}
         </main>
     </div>
+    {% include scripts.html %}
 </body>
-{% include scripts.html %}
 
 </html>

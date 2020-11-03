@@ -1,19 +1,26 @@
 ---
-layout: default
+layout: page
 ---
 
+{% for post in paginator.posts %}
 <article class="post" role="article" itemscope="" itemtype="">
     <header class="post-header">
         <ul>
-            <li><time datetime="{{ post.date }}" itemprop="datePublished">{{ page.date }}</time></li>            
+            <li><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: '%B %d, %Y' }}</time></li>            
         </ul>
-        <h2 itemprop="name headline">{{ page.title }}</h2>
+        <h2 itemprop="name headline">{{ post.title }}</h2>
+        <h1 itemprop="name">
+            {% if post.subtitle %}
+            {{ post.subtitle }}
+            {% else %}
+            {{ post.excerpt | strip_html | truncatewords: 15 }}
+            {% endif %}
+        </h1>
     </header>
 
     <div class="post-content">
-        {{ page.content }}
+        {{ post.content }}
     </div>
-    
     <footer class="post-footer">
         <div class="share">Share
             <ul class="social-networks">
@@ -28,21 +35,10 @@ layout: default
         
         <div class="tags">
             <ul>                
-                <li>{{ page.author }}</li>                               
+                <li>{% if post.author %} {{ post.author }} {% else %} {{ site.author }} {% endif %}</li>                               
             </ul>
         </div>        
     </footer>
-    <div class="clearfix">
-
-        {% if page.previous.url %}
-        <a class="btn btn-primary float-left" href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.previous.title }}">← Previous<span class="d-none d-md-inline">
-            Post</span></a>
-        {% endif %}
-        {% if page.next.url %}
-        <a class="btn btn-primary float-right" href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{ page.next.title }}">Next<span class="d-none d-md-inline">
-            Post</span> →</a>
-        {% endif %}
-
-      </div>
 </article>
 
+{% endfor %}

@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<title>{{ site.title }}</title>
+{% if site.description %}
+<meta name="description" content="{{ site.description }}">
+<meta name="description" property="og:description" content="{{ site.description }}">
+<meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
+
+{{ content }}
+
+
+{% for post in site.posts limit : 5 %}
+<article class="post" role="article" itemscope="" itemtype="">
+    <header class="post-header">
+        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
+        <ul>
+            <li><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date }}</time></li>
+        </ul>
+        <h2 itemprop="name headline">{{ post.title }}</h2>
+        </a>
+    </header>
+
+    <div class="post-content">
+        {% if post.subtitle %}
+        {{ post.subtitle }}
+        {% else %}
+        {{ post.excerpt | strip_html | truncatewords: 15 }}
+        {% endif %}
+    </div>
+
+    <footer class="post-footer">
+        <div class="share">Share
+            <ul class="social-networks">
+                <li class="share-facebook">
+                    <a class="twitter-share-button"
+                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.jayprakash02.github.io%2F&amp;src=sdkpreparse"><i
+                            class="fa fa-facebook fa-fw" aria-hidden="true"></i>&nbsp;</a>
+                </li>
+                <li class="share-twitter">
+                    <a class="twitter-share-button"
+                        href="https://twitter.com/intent/tweet?text=CheckOut%20this%20page:%20https://wwww.jayprakash02.github.io/"><i
+                            class="fa fa-twitter fa-fw" aria-hidden="true"></i>&nbsp;</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="tags">
+            <ul>
+                <li>{{ post.author }}</li>
+            </ul>
+        </div>
+    </footer>
+</article>
+{% endfor %}
+<div class="clearfix">
+    <a class="btn btn-primary float-right" href="{{" posts"="" |="" relative_url="" }}"="">View All Posts →</a>
+  </div>

@@ -1,15 +1,19 @@
 ---
 layout: default
 ---
-
-{% for post in site.posts %}   
+  
 <article class="post" role="article" itemscope="" itemtype="">
     <header class="post-header">
         <ul>
             <li><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date }}</time></li>            
         </ul>
-        <h2 itemprop="name headline">{{ post.title }}</h2>
+        <h2 itemprop="name headline">{{ page.title }}</h2>
+        <h1 itemprop="name">{% if page.description %} {{ page.description }} {% endif %}</h1>
     </header>
+    
+    <div class="post-content">
+        {{ page.content }}
+    </div>
 </article>
 
-{% endfor %}                
+
