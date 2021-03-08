@@ -20,14 +20,22 @@
 
 title: drDjango
 email: unijay12@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://jayprakash02.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+description: "JayPrakash | Drdjango" # this means to ignore newlines until "baseurl:"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "blog.drdjango.ml" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username: jekyllrb
+github_username:  jayprakash02
+
+author:
+  name: Jay Prakash
+  image: /media/jay/User/github-workspace/blog/assets/image/128.jpg
+social:
+  name: Jay Prakash
+  links:
+    - https://www.facebook.com/jp.star.02
+    - https://www.linkedin.com/in/jay-prakash-002
+    - https://github.com/jayprakash02
+
 
 # Build settings
 theme: minima
@@ -37,6 +45,7 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
