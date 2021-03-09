@@ -36,6 +36,9 @@ social:
     - https://www.linkedin.com/in/jay-prakash-002
     - https://github.com/jayprakash02
 
+disqus:
+  shortname: blog-drdjango-ml
+
 
 # Build settings
 theme: minima
