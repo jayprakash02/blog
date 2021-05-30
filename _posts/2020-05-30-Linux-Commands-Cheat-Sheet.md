@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "Linux Commands List"
+date:   2021-05-30 21:15:19 +0530
+categories: Linux
+author: Jay prakash
+---
 # Linux Commands List
 
 ### Hardware Information
